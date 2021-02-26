@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hidden things assignment</title>
+</head>
+
+<body>
+
+<h1>Hidden Things by Luke Boyles</h1>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="form1_secret">Enter the secret word </label>
+    <input type ="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value=Secret> <br>
+
+    <label for="form1_guess">Enter a guess </label>
+    <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess">
+</form>
+
+
+<p id="result">This will be replaces</p>
+
+<script> 
+
+function processGuess (){
+    console.log("Getting form values")
+    correct = 0
+    wrong = 0
+    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(confirmed){
+        out.innerHTML = "Values were confirmed"
+    } else {
+        out.innerHTML = "Values were not confirmed"
+    }
+}
+</script>
+
+</body>
+</html> 
