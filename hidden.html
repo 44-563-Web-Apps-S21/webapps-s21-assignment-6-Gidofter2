@@ -41,5 +41,29 @@ function processGuess (){
 }
 </script>
 
+<div class="container">
+    <img src="elm.png" width="200" height="200" onclick="rotateImage" alt="" />  
+     
+</div>
+
+<script>
+    var currentImage = "0";
+    function rotateImage(){
+        switch (currentImage){
+            case 0:
+                document.getElementById("currentImage").src = "Lemon Tree.png"
+                break;
+            case 1:
+                document.getElementById("currentImage").src = "yucca.png"
+                break;
+            
+            case 2:    
+                document.getElementById("currentImage").src = "elm.png"
+        }
+
+    }    
+</script> 
+
+
 </body>
 </html> 
